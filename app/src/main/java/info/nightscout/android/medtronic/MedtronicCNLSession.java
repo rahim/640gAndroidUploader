@@ -3,7 +3,7 @@ package info.nightscout.android.medtronic;
 /**
  * Created by lgoedhart on 26/03/2016.
  */
-public class MedtronicCnlSession {
+public class MedtronicCNLSession {
     private byte[] HMAC;
     private byte[] key;
 

@@ -43,9 +43,9 @@ import info.nightscout.android.utils.HexDump;
 /**
  * Created by lgoedhart on 24/03/2016.
  */
-public class MedtronicCnlReader implements ContourNextLinkMessageHandler {
+public class MedtronicCNLReader implements ContourNextLinkMessageHandler {
 
-    private static final String TAG = MedtronicCnlReader.class.getSimpleName();
+    private static final String TAG = MedtronicCNLReader.class.getSimpleName();
 
     private static final int USB_BLOCKSIZE = 64;
     private static final int READ_TIMEOUT_MS = 5000;
@@ -54,11 +54,11 @@ public class MedtronicCnlReader implements ContourNextLinkMessageHandler {
     private static final byte[] RADIO_CHANNELS = {0x14, 0x11, 0x0e, 0x17, 0x1a};
     private UsbHidDriver mDevice;
 
-    private MedtronicCnlSession mPumpSession = new MedtronicCnlSession();
+    private MedtronicCNLSession mPumpSession = new MedtronicCNLSession();
 
     private String mStickSerial = null;
 
-    public MedtronicCnlReader(UsbHidDriver device) {
+    public MedtronicCNLReader(UsbHidDriver device) {
         mDevice = device;
     }
 
@@ -87,7 +87,7 @@ public class MedtronicCnlReader implements ContourNextLinkMessageHandler {
         return mStickSerial;
     }
 
-    public MedtronicCnlSession getPumpSession() {
+    public MedtronicCNLSession getPumpSession() {
         return mPumpSession;
     }
 

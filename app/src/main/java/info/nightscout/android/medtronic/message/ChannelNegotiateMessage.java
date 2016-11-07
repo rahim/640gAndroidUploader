@@ -1,6 +1,6 @@
 package info.nightscout.android.medtronic.message;
 
-import info.nightscout.android.medtronic.MedtronicCnlSession;
+import info.nightscout.android.medtronic.MedtronicCNLSession;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -9,11 +9,11 @@ import java.nio.ByteOrder;
  * Created by lgoedhart on 26/03/2016.
  */
 public class ChannelNegotiateMessage extends MedtronicMessage {
-    public ChannelNegotiateMessage(MedtronicCnlSession pumpSession) {
+    public ChannelNegotiateMessage(MedtronicCNLSession pumpSession) {
         super(CommandType.SEND_MESSAGE, CommandAction.CHANNEL_NEGOTIATE, pumpSession, buildPayload(pumpSession));
     }
 
-    protected static byte[] buildPayload( MedtronicCnlSession pumpSession ) {
+    protected static byte[] buildPayload( MedtronicCNLSession pumpSession ) {
         ByteBuffer payload = ByteBuffer.allocate(26);
         payload.order(ByteOrder.LITTLE_ENDIAN);
         // The MedtronicMessage sequence number is always sent as 1 for this message,
