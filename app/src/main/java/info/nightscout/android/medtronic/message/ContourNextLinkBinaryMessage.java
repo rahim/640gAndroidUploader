@@ -1,6 +1,6 @@
 package info.nightscout.android.medtronic.message;
 
-import info.nightscout.android.medtronic.MedtronicCNLSession;
+import info.nightscout.android.medtronic.MedtronicCnlSession;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -12,7 +12,7 @@ import java.util.Locale;
 public class ContourNextLinkBinaryMessage extends ContourNextLinkMessage{
     //protected ByteBuffer mBayerEnvelope;
     //protected ByteBuffer mBayerPayload;
-    //protected MedtronicCNLSession mPumpSession;
+    //protected MedtronicCnlSession mPumpSession;
     //protected CommandType mCommandType = CommandType.NO_TYPE;
 
     static int ENVELOPE_SIZE = 33;
@@ -36,11 +36,11 @@ public class ContourNextLinkBinaryMessage extends ContourNextLinkMessage{
         }
     }
 
-    public ContourNextLinkBinaryMessage(CommandType commandType, MedtronicCNLSession pumpSession, byte[] payload) {
+    public ContourNextLinkBinaryMessage(CommandType commandType, MedtronicCnlSession pumpSession, byte[] payload) {
         super(buildPayload(commandType, pumpSession, payload));
     }
 
-    protected static byte[] buildPayload(CommandType commandType, MedtronicCNLSession pumpSession, byte[] payload) {
+    protected static byte[] buildPayload(CommandType commandType, MedtronicCnlSession pumpSession, byte[] payload) {
         int payloadLength = payload == null ? 0 : payload.length;
 
         ByteBuffer payloadBuffer = ByteBuffer.allocate( ENVELOPE_SIZE + payloadLength );

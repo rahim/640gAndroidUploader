@@ -54,7 +54,7 @@ public class MedtronicCnlReader implements ContourNextLinkMessageHandler {
     private static final byte[] RADIO_CHANNELS = {0x14, 0x11, 0x0e, 0x17, 0x1a};
     private UsbHidDriver mDevice;
 
-    private MedtronicCNLSession mPumpSession = new MedtronicCNLSession();
+    private MedtronicCnlSession mPumpSession = new MedtronicCnlSession();
 
     private String mStickSerial = null;
 
@@ -87,7 +87,7 @@ public class MedtronicCnlReader implements ContourNextLinkMessageHandler {
         return mStickSerial;
     }
 
-    public MedtronicCNLSession getPumpSession() {
+    public MedtronicCnlSession getPumpSession() {
         return mPumpSession;
     }
 
