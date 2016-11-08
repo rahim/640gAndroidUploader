@@ -522,7 +522,7 @@ public class MainActivity extends AppCompatActivity implements OnSharedPreferenc
             textViewUnits.setText(units);
             textViewBgTime.setText(DateUtils.getRelativeTimeSpanString(pumpStatusData.getEventDate().getTime()));
             textViewTrend.setText(Html.fromHtml(renderTrendHtml(pumpStatusData.getCgmTrend())));
-            textViewIOB.setText(String.format(Locale.getDefault(), "%.2f", pumpStatusData.getActiveInsulin()));
+            textViewIOB.setText(String.format(Locale.getDefault(), "%.3f", pumpStatusData.getActiveInsulin()));
 
             // TODO - waiting for MPAndroidCharts 3.0.0. This will fix:
             // Date support
